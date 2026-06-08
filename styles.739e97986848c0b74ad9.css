@@ -1,0 +1,1 @@
+*{box-sizing:border-box;margin:0;padding:0}ul{display:flex;list-style:none;background-color:#000;justify-content:flex-end;padding:1rem 1.5rem;& li{color:#fff;cursor:pointer;transition:color .4s ease-in-out;&.active,&:hover{color:lime}&:not(:first-of-type){margin-left:1rem}}}
