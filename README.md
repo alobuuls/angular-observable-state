@@ -1,24 +1,67 @@
-# 🚀 Angular Observable State
+<h1 align="center">🔄 Angular Observable State</h1>
 
-Aplicación desarrollada en **Angular 12** que demuestra cómo compartir estado entre componentes utilizando `BehaviorSubject` y RxJS.
+<p align="center">
+  <img src="https://img.shields.io/badge/Angular-12-DD0031?logo=angular&logoColor=white" alt="Angular" />
+  <img src="https://img.shields.io/badge/TypeScript-4.x-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Architecture-State%20Management-blue" alt="State Management" />
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen" alt="Completed" />
+</p>
 
-El proyecto permite emitir, leer y actualizar información entre páginas mediante un servicio centralizado.
+<p align="center">
+  <a href="https://github.com/alobuuls/angular-observable-state" target="_blank"><img src="https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white" alt="Repository" /></a>
+  <a href="https://github.com/alobuuls/angular-observable-state/stargazers" target="_blank"><img src="https://img.shields.io/github/stars/alobuuls/angular-observable-state?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/alobuuls/angular-observable-state/commits/main" target="_blank"><img src="https://img.shields.io/github/last-commit/alobuuls/angular-observable-state" alt="Last Commit" /></a>
+</p>
 
 ---
 
-## ⚙️ Requisitos del sistema
+## 📑 Table of Contents
 
-Antes de ejecutar el proyecto, asegúrate de tener instalado:
+* [🔄 Angular Observable State](#-angular-observable-state)
 
-- 📦 **Node.js:** `v14.x` o `v16.x` *(preferiblemente v14.21.3)*
-- 📦 **npm:** `v6+`
-- 🅰️ **Angular CLI:** `v12.x`
+  * [🌐 Live Demo](#-live-demo)
+  * [📖 Description](#-description)
+  * [⚙️ System Requirements](#️-system-requirements)
+  * [🚀 Project Installation](#-project-installation)
+  * [▶️ Run the Project](#️-run-the-project)
+  * [🧠 Project Architecture](#-project-architecture)
+  * [✨ Features](#-features)
+  * [🛠 Technologies Used](#-technologies-used)
+  * [📁 Project Structure](#-project-structure)
+  * [🔥 Best Practices Implemented](#-best-practices-implemented)
+  * [🎯 Project Goal](#-project-goal)
+  * [📄 License](#-license)
 
 ---
 
-## 🔍 Verificar versiones instaladas
+## 🌐 Live Demo
 
-Ejecuta:
+🔗 https://alobuuls.github.io/angular-observable-state/
+
+---
+
+## 📖 Description
+
+> [!NOTE]
+> Angular 12 application that demonstrates state management using RxJS and BehaviorSubject to share information between components and pages.
+
+The project showcases reactive programming concepts, centralized state management, component communication, and Angular architecture best practices through a simple but scalable implementation.
+
+---
+
+## ⚙️ System Requirements
+
+Before running the project, make sure you have installed:
+
+* 📦 **Node.js:** `v12.14.x – v14.x` *(recommended: v14.21.3 LTS)*
+* 📦 **npm:** `v6+`
+* 🅰️ **Angular CLI:** `v12.x`
+
+---
+
+## 🔍 Verify Installed Versions
+
+Run the following commands in your terminal:
 
 ```bash
 node -v
@@ -28,16 +71,17 @@ ng version
 
 ---
 
-## 🚀 Instalación del proyecto
+## 🚀 Project Installation
 
-### 1️⃣ Clonar repositorio
+### 1️⃣ Clone the repository
 
 ```bash
-git clone <URL_DEL_REPO>
+git clone git@github.com:alobuuls/angular-observable-state.git
+
 cd angular-observable-state
 ```
 
-### 2️⃣ Instalar dependencias
+### 2️⃣ Install dependencies
 
 ```bash
 npm install
@@ -45,94 +89,167 @@ npm install
 
 ---
 
-## ▶️ Ejecutar proyecto
+## ▶️ Run the Project
+
+Start the development server:
 
 ```bash
 ng serve
 ```
 
-Luego abre:
+Then open:
 
-```bash
+```text
 http://localhost:4200
 ```
 
 ---
 
-## 🧠 Arquitectura del proyecto
+## 🧠 Project Architecture
 
-El proyecto utiliza un servicio global para compartir información entre páginas.
+The application follows a simple state management architecture based on RxJS observables and a centralized service.
 
-### 📦 StateService
+### 📦 State Service
 
-Gestiona el estado usando:
+Responsible for:
 
-- `BehaviorSubject`
-- `asObservable()`
-- `next()`
+* Global state management
+* BehaviorSubject implementation
+* State updates
+* Observable subscriptions
+* Component communication
+
+### 📦 Page 1
+
+Responsible for:
+
+* State emission
+* User input handling
+* Updating shared data
+
+### 📦 Page 2
+
+Responsible for:
+
+* State subscription
+* Reactive data display
+* Observable consumption
+
+### 📦 Page 3
+
+Responsible for:
+
+* Reading shared state
+* Updating shared state
+* Bidirectional communication
+
+### 📦 Main Module
+
+Responsible for:
+
+* Application bootstrap
+* Route configuration
+* Dependency injection
 
 ---
 
-## 📄 Páginas del proyecto
+## ✨ Features
 
-### 📌 Page 1 — Emisor
-
-Permite enviar información al estado global.
-
-### 📌 Page 2 — Lector
-
-Escucha cambios del estado y renderiza información.
-
-### 📌 Page 3 — Emisor + Lector
-
-Lee y modifica el estado compartido.
-
----
-
-## ⚙️ Funcionalidades principales
-
-- 🔄 Estado compartido entre componentes
-- 📡 Comunicación usando BehaviorSubject
-- 🧠 Patrón simple de state management
-- 📦 Actualización reactiva de datos
-- 🌐 Angular Forms (`ngModel`)
+* 🔄 Shared state between pages
+* 📡 Communication with BehaviorSubject
+* ⚡ Reactive programming with RxJS
+* 🎯 Observable subscriptions
+* 📦 Centralized state management
+* 🧩 Decoupled component communication
+* 🌐 Angular Forms with ngModel
+* 🚀 Real-time data updates
+* 🧠 Simple state management pattern
+* 🎯 Strong typing with TypeScript
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## 🛠 Technologies Used
 
-- 🅰️ Angular 12
-- ⚡ TypeScript
-- 🔄 RxJS
-- 🌐 Angular Forms
+| Technology      | Purpose              |
+| --------------- | -------------------- |
+| Angular 12      | Framework            |
+| TypeScript      | Application Logic    |
+| RxJS            | Reactive Programming |
+| BehaviorSubject | State Management     |
+| Angular Forms   | Form Handling        |
+| Angular Router  | Navigation           |
+| HTML5           | Structure            |
+| CSS3            | Styling              |
 
 ---
 
-## 📁 Estructura del proyecto
+## 📁 Project Structure
 
-```bash
-src/app/
-├── pages/
-│   ├── page-1/
-│   ├── page-2/
-│   └── page-3/
-├── services/
-│   └── state.service.ts
-├── app.routes.ts
-├── app.module.ts
+```text
+angular-observable-state/
+
+├── src/
+│
+├── app/
+│   │
+│   ├── pages/
+│   │   ├── page-1/
+│   │   ├── page-2/
+│   │   └── page-3/
+│   │
+│   ├── services/
+│   │   └── state.service.ts
+│   │
+│   ├── app.component.ts
+│   ├── app.module.ts
+│   └── app.routes.ts
+│
+├── environments/
+│   ├── environment.ts
+│   └── environment.prod.ts
+│
+├── angular.json
+├── package.json
+├── tsconfig.json
+└── README.md
 ```
 
 ---
 
-## 🔥 Buenas prácticas implementadas
+## 🔥 Best Practices Implemented
 
-- Separación de lógica mediante servicios
-- Estado reactivo con RxJS
-- Comunicación desacoplada entre componentes
-- Arquitectura simple escalable
+* Centralized state management
+* Reactive programming with RxJS
+* Separation of concerns
+* Observable pattern implementation
+* Service-based architecture
+* Decoupled component communication
+* Strong typing with TypeScript
+* Dependency injection
+* Scalable state management structure
+* Angular modular organization
 
 ---
 
-## 📄 Licencia
+## 🎯 Project Goal
 
-Este proyecto es de uso educativo y forma parte de un portafolio personal.
+Practice and strengthen Angular state management concepts through the implementation of a reactive application:
+
+* RxJS Fundamentals
+* BehaviorSubject
+* Observable Pattern
+* Shared State Management
+* Component Communication
+* Angular Services
+* Dependency Injection
+* Reactive Programming
+* TypeScript
+* Front-End Architecture
+
+---
+
+## 📄 License
+
+This project is intended for educational and portfolio purposes.
+
+Created by **Alondra Francisco**.
